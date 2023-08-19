@@ -6,6 +6,7 @@ export type LineChartDataType = {
 export interface IWarningItemProps {
   label: string;
   type: TWarningType;
+  description?: string;
 }
 
 export type TWarningType = "warning" | "error";

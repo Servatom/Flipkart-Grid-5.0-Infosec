@@ -21,7 +21,7 @@ const Navbar: React.FC = () => {
       <div className="mr-6 flex flex-row items-center">
         <Image src={logo} alt="logo" width={36} height={36} />
       </div>
-      <NavigationMenuList className="ml-auto">
+      <NavigationMenuList className="ml-auto flex flex-row gap-2">
         <NavigationMenuItem>
           <Link href="/" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>

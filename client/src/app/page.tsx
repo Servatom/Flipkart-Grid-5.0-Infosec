@@ -1,5 +1,6 @@
 import LineGraph from "@/components/common/LineGraph";
 import WarningItem from "@/components/common/WarningItem";
+import StatCards from "@/components/overview/StatCards";
 import {
   Card,
   CardContent,
@@ -7,13 +8,17 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { LINECHART_DATA, WARNING_ITEMS } from "@/lib/constants";
+import {
+  COMPLIANCE_ITEMS,
+  LINECHART_DATA,
+  WARNING_ITEMS,
+} from "@/lib/constants";
 import Image from "next/image";
 
 export default function Home() {
   return (
     <div className="flex flex-col gap-4">
-      <h1 className="text-3xl font-semibold">Overview</h1>
+      <StatCards />
       <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-7">
         <Card className="col-span-4">
           <CardHeader>
@@ -33,6 +38,23 @@ export default function Home() {
           <CardContent className="gap-4 flex flex-col">
             {WARNING_ITEMS.map((item, index) => (
               <WarningItem key={index} label={item.label} type={item.type} />
+            ))}
+          </CardContent>
+        </Card>
+        <Card className="col-span-7">
+          <CardHeader>
+            <CardTitle className="text-lg">
+              Potential Compliance Violations
+            </CardTitle>
+          </CardHeader>
+          <CardContent className="gap-4 flex flex-col">
+            {COMPLIANCE_ITEMS.map((item, index) => (
+              <WarningItem
+                key={index}
+                label={item.label}
+                type={item.type}
+                description={item.description}
+              />
             ))}
           </CardContent>
         </Card>

@@ -80,3 +80,22 @@ export const WARNING_ITEMS: {
     type: "warning",
   },
 ];
+
+export const COMPLIANCE_ITEMS: {
+  label: string;
+  type: TWarningType;
+  description?: string;
+}[] = [
+  {
+    label: "Risk Management and Vulnerability Assessment",
+    type: "warning",
+    description:
+      "Protection within and outside organization borders/network based on sensitivity and risk exposure.",
+  },
+  {
+    label: "Incident Response and Business Continuity",
+    type: "warning",
+    description:
+      "Have BCP/DR capabilities to recover from cyber-attacks/incidents. Participate in cyber drills and test incident response plans.",
+  },
+];
