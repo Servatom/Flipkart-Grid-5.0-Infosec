@@ -17,9 +17,9 @@ import Image from "next/image";
 
 const Navbar: React.FC = () => {
   return (
-    <NavigationMenu className="w-full flex flex-row gap-4 p-6 justify-between">
-      <div className="mr-8 flex flex-row items-center">
-        <Image src={logo} alt="logo" width={40} height={40} />
+    <NavigationMenu className="w-full flex flex-row gap-4 p-6 px-12 justify-between">
+      <div className="mr-6 flex flex-row items-center">
+        <Image src={logo} alt="logo" width={36} height={36} />
       </div>
       <NavigationMenuList className="ml-auto">
         <NavigationMenuItem>
