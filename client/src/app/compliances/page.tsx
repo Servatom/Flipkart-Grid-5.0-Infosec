@@ -5,6 +5,8 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { useState } from "react";
+import { SIMPLIFIED_COMPLIANCE_ITEMS } from "@/lib/constants";
+import ComplianceClusters from "@/components/compliances/ComplianceClusters";
 
 const Compliances = () => {
   const [isUploaded, setIsUploaded] = useState(false);
@@ -13,8 +15,11 @@ const Compliances = () => {
       <UploadBox />
       <Loading
         label="Loading"
-        description="Analysing the compliances and clustering into categories. This may take a few minutes. Also generating recommendations for test suites and checks for adhering to the compliances."
+        description={`Analysing the compliances and clustering into categories. This may take a few minutes. Also generating recommendations for test suites and checks for adhering to the compliances.
+        These test suites and checks will help ensure that the organization adheres to the compliance requirements in each cluster and maintains a robust cybersecurity posture. Regular testing and validation are essential to identify and address any potential vulnerabilities or non-compliance issues proactively.
+        `}
       />
+      <ComplianceClusters />
     </div>
   );
 };
