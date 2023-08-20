@@ -19,7 +19,9 @@ const Navbar: React.FC = () => {
   return (
     <NavigationMenu className="w-full flex flex-row gap-4 p-6 px-12 justify-between">
       <div className="mr-6 flex flex-row items-center">
-        <Image src={logo} alt="logo" width={36} height={36} />
+        <Link href={"/"}>
+          <Image src={logo} alt="logo" width={36} height={36} />
+        </Link>
       </div>
       <NavigationMenuList className="ml-auto flex flex-row gap-2">
         <NavigationMenuItem>

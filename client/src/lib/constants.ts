@@ -228,3 +228,29 @@ export const SIMPLIFIED_COMPLIANCE_ITEMS = [
       "Monitor access logs for suspicious customer activities, validate identity verification processes, and review customer access privileges.",
   },
 ];
+
+export const PREVIOUS_SCANS: {
+  label: string;
+  description: string;
+}[] = [
+  {
+    label: "HDFS 19-08-2023",
+    description:
+      "2500 logs scanned, 2 critical vulnerabilities and 3 warnings found",
+  },
+  {
+    label: "OpenSSH 20-08-2023",
+    description:
+      "2460 logs scanned, 0 critical vulnerabilities and 1 warnings found",
+  },
+  {
+    label: "Apache 20-08-2023",
+    description:
+      "2100 logs scanned, 1 critical vulnerabilities and 6 warnings found",
+  },
+  {
+    label: "HDFS 20-08-2023",
+    description:
+      "2500 logs scanned, 3 critical vulnerabilities and 3 warnings found",
+  },
+];
