@@ -10,3 +10,8 @@ export interface IWarningItemProps {
 }
 
 export type TWarningType = "warning" | "error";
+
+export interface ILoadingProps {
+  label: string;
+  description?: string;
+}
