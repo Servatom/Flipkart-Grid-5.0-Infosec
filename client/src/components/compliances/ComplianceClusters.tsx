@@ -10,7 +10,7 @@ const ComplianceClusters: React.FC = () => {
       </CardDescription>
       {SIMPLIFIED_COMPLIANCE_ITEMS.map((cluster, index) => (
         <div key={index} className="my-4">
-          <CardTitle>{cluster.cluster_name}</CardTitle>
+          <CardTitle>• {cluster.cluster_name}</CardTitle>
           <CardContent className="p-0">
             <ul className="flex flex-col gap-1 py-2">
               {cluster.requirements.map((requirement, index) => (
