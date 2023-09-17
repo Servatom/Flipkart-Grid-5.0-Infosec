@@ -12,7 +12,7 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 import Link from "next/link";
-import logo from "@/assets/logo.png";
+import logo from "@/assets/aicte.png";
 import Image from "next/image";
 
 const Navbar: React.FC = () => {

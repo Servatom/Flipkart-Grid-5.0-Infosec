@@ -20,6 +20,23 @@ export default function Home() {
     <div className="flex flex-col gap-4">
       <StatCards />
       <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-7">
+        <Card className="col-span-7">
+          <CardHeader>
+            <CardTitle className="text-lg">
+              Potential Compliance Violations
+            </CardTitle>
+          </CardHeader>
+          <CardContent className="gap-4 flex flex-col">
+            {COMPLIANCE_ITEMS.map((item, index) => (
+              <WarningItem
+                key={index}
+                label={item.label}
+                type={item.type}
+                description={item.description}
+              />
+            ))}
+          </CardContent>
+        </Card>
         <Card className="col-span-4">
           <CardHeader>
             <CardTitle className="text-lg">Log Anomalies Detected</CardTitle>
@@ -38,23 +55,6 @@ export default function Home() {
           <CardContent className="gap-4 flex flex-col">
             {WARNING_ITEMS.map((item, index) => (
               <WarningItem key={index} label={item.label} type={item.type} />
-            ))}
-          </CardContent>
-        </Card>
-        <Card className="col-span-7">
-          <CardHeader>
-            <CardTitle className="text-lg">
-              Potential Compliance Violations
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="gap-4 flex flex-col">
-            {COMPLIANCE_ITEMS.map((item, index) => (
-              <WarningItem
-                key={index}
-                label={item.label}
-                type={item.type}
-                description={item.description}
-              />
             ))}
           </CardContent>
         </Card>

@@ -6,8 +6,8 @@ import { Inter } from "next/font/google";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Flipkart - Compliance Dashboard",
-  description: "Compliance monitoring dashboard for Flipkart",
+  title: "AICTE - Security Dashboard",
+  description: "Compliance monitoring and log analysis dashboard",
 };
 
 export default function RootLayout({
